@@ -10,4 +10,8 @@ with open("MSX.json") as fichero:
 def pagina_principal():
     return render_template("paginaprincipal.html",documento=doc)
 
+@app.route('/juego/<isbn>')
+def pagina_juegos():
+        return render_template("")
+
 app.run(debug=True)
