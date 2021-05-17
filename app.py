@@ -16,6 +16,6 @@ def pagina_juegos():
 
 @app.route('/listajuegos')
 def pagina_lista_juegos():
-        return render_template("")
+        return render_template("listajuegos.html")
 
 app.run(debug=True)
