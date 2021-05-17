@@ -14,7 +14,7 @@ def pagina_principal():
 def pagina_juegos():
         return render_template("juegos.html")
 
-@app.route('/listajuegos/')
+@app.route('/listajuegos')
 def pagina_lista_juegos():
         return render_template("")
 
