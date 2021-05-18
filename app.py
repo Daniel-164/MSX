@@ -18,7 +18,7 @@ def pagina_juegos():
         else:
                 return render_template("listajuegos.html")
 
-@app.route('/listajuegos')
+@app.route('/listajuegos',methods=["POST"])
 def pagina_lista_juegos():
         return render_template("listajuegos.html")
 
