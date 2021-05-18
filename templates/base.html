@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}">
-        <meta charset="utf-8" />
-    </head>
-    <body>
-        <header>
-            <h1>Mi sitio web</h1>
-            <p>Mi sitio web creado en html5</p>
-        </header>
-        {% block content %}{% endblock %}
-    </body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}">
+	</head>
+	<body class="is-preload">
+
+				<!-- Header -->
+					<header id="header">
+						<img src="{{url_for('static', filename='images/msx.png')}}"/>
+						<h1><a href="index.html">Página principal</a></h1>
+						<nav class="main">
+							<ul>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+	</body>
 </html>
