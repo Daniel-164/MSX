@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, request
 import json
 
 app = Flask(__name__)
@@ -10,9 +10,10 @@ with open("MSX.json") as fichero:
 def pagina_principal():
     return render_template("paginaprincipal.html",documento=doc)
 
-@app.route('/juegos')
+@app.route('/juegos',methods=["GET"])
 def pagina_juegos():
-        return render_template("juegos.html")
+        juego=request.form.get("juego")
+        return render_template("juegos.html", juego=juego)
 
 @app.route('/listajuegos')
 def pagina_lista_juegos():

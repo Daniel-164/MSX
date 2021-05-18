@@ -1,14 +1,6 @@
 {% extends "base.html" %}
-{% block title %}Pagina principal{% endblock %}
+{% block title %}Página Principal{% endblock %}
 {% block content %}
     <h1>Página principal</h1>
     <img src="{{url_for('static', filename='images/msx.png')}}"/>
-    <h1><a href="index.html">Página principal</a></h1>
-    <nav class="main">
-        <ul>
-            <li class="menu">
-                <a class="fa-bars" href="#menu">Menu</a>
-            </li>
-        </ul>
-    </nav>
 {% endblock %}

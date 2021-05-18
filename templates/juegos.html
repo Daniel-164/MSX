@@ -1,5 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Pagina Juegos{% endblock %}
+{% block title %}Página Juegos{% endblock %}
 {% block content %}
     <h1>Página Juegos</h1>
+    <form action="/juegos" method="post">
+        <label>Juego:</label>
+        <input type="text" name="juego" required/>
+    </form>
+
 {% endblock %}
