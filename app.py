@@ -12,11 +12,8 @@ def pagina_principal():
 
 @app.route('/juegos',methods=["GET","POST"])
 def pagina_juegos():
-        if request.method=="GET":
-                juego=request.form.get("juego")
-                return render_template("juegos.html", juego=juego)
-        else:
-                return render_template("listajuegos.html")
+        juego=request.form.get("juego")
+        return render_template("juegos.html", juego=juego)
 
 @app.route('/listajuegos',methods=["POST"])
 def pagina_lista_juegos():
