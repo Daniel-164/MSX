@@ -17,6 +17,7 @@ def pagina_juegos():
 
 @app.route('/listajuegos',methods=["POST"])
 def pagina_lista_juegos():
+        #cadena=startswith()
         return render_template("listajuegos.html")
 
 app.run(debug=True)
