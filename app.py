@@ -20,4 +20,8 @@ def pagina_lista_juegos():
         #cadena=startswith()
         return render_template("listajuegos.html")
 
+@app.route('/juego/<identificador>')
+def pagina_juego():
+        return render_template("juego.html")
+
 app.run(debug=True)
