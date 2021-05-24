@@ -13,4 +13,11 @@
                 <td>Detalle</td>
             </tr>
     </table>
-{% endblock %}
+    <p>Juego introducido por usuario: {{juego_a_buscar}}</p>
+    <p>Juego en fichero: {{juegosmsx.nombre}}</p>
+    {% for i in juegosmsx.nombre -%}
+        {% if i.startswith('juego_a_buscar') %}
+            <p>{{i}}</p>
+        {% endif %}
+    {% endfor -%}
+{% endblock %} 
