@@ -28,7 +28,12 @@ def pagina_lista_juegos():
 
 @app.route('/juego/<identificador>')
 def pagina_juego(identificador):
-        if identificador in identificador:
-                return render_template("juego.html", identificador=identificador)
+        with open("MSX.json") as fichero:
+                doc = json.load(fichero)
+        if int(identificador) > 0 and int(identificador) < 51:
+                return render_template("juego.html", identificador=identificador, juegosmsx=doc)
+                
+        else:
+                abort(404)
 
 app.run(debug=True)
