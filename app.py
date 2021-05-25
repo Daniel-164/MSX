@@ -29,6 +29,6 @@ def pagina_lista_juegos():
 @app.route('/juego/<identificador>')
 def pagina_juego(identificador):
         if identificador in identificador:
-                return render_template("juego.html")
+                return render_template("juego.html", identificador=identificador)
 
 app.run(debug=True)
