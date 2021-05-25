@@ -5,19 +5,25 @@
     <table>
             <tr>
                 <td>Nombre</td>
+                <td>
+                {% for i in juegosmsx -%}
+                <p>{{i.nombre}}</p>
+                {% endfor -%}
+                </td>
             </tr>
             <tr>
                 <td>Desarrollador</td>
+                <td>
+                    {% for i in juegosmsx -%}
+                    <p>{{i.desarrollador}}</p>
+                    {% endfor -%}
+                </td>
             </tr>
             <tr>
                 <td>Detalle</td>
+                {% for i in juegosmsx -%}
+                <a href="/juego/{{i.id}}">Detalle del juego</a>
+                {% endfor -%}
             </tr>
-    </table>
-    <p>Juego introducido por usuario: {{juego_a_buscar}}</p>
-    <p>Juego en fichero: {{juegosmsx.nombre}}</p>
-    {% for i in juegosmsx.nombre -%}
-        {% if i.startswith('juego_a_buscar') %}
-            <p>{{i}}</p>
-        {% endif %}
-    {% endfor -%}
+    </table>    
 {% endblock %} 
