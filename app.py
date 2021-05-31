@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, abort, request
 import json
 
@@ -35,4 +36,5 @@ def pagina_juego(identificador):
                         return render_template("juego.html", i=i, juegosmsx=doc)
         abort(404)
 
-app.run(debug=True)
+port=os.environ["PORT"]
+app.run('0.0.0.0', int(port), debug=False)
