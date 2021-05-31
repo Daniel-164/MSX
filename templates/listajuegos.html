@@ -5,25 +5,17 @@
     <table>
             <tr>
                 <td>Nombre</td>
-                <td>
-                {% for i in juegosmsx -%}
-                <p>{{i.nombre}}</p>
-                {% endfor -%}
-                </td>
-            </tr>
-            <tr>
                 <td>Desarrollador</td>
-                <td>
-                    {% for i in juegosmsx -%}
-                    <p>{{i.desarrollador}}</p>
-                    {% endfor -%}
-                </td>
-            </tr>
-            <tr>
                 <td>Detalle</td>
-                {% for i in juegosmsx -%}
-                <a href="/juego/{{i.id}}">Detalle del juego</a>
-                {% endfor -%}
             </tr>
+            
+                {% for i in juegosmsx -%}
+                <tr>
+                <td>{{i.nombre}}</td>
+                <td>{{i.desarrollador}}</td>
+                <td><a href="/juego/{{i.id}}">Detalle del juego</a></td>
+            </tr>
+                {% endfor -%}
+             
     </table>    
 {% endblock %} 

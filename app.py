@@ -30,10 +30,9 @@ def pagina_lista_juegos():
 def pagina_juego(identificador):
         with open("MSX.json") as fichero:
                 doc = json.load(fichero)
-        if int(identificador) > 0 and int(identificador) < 51:
-                return render_template("juego.html", identificador=identificador, juegosmsx=doc)
-                
-        else:
-                abort(404)
+        for i in doc:
+                if i.get("id")==int(identificador):
+                        return render_template("juego.html", i=i, juegosmsx=doc)
+        abort(404)
 
 app.run(debug=True)

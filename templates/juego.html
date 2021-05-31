@@ -2,7 +2,17 @@
 {% block title %}Página Juego{% endblock %}
 {% block content %}
     <h1>Página Juego</h1>
-    {% for identificador in juegosmsx -%}
-    <p>{{identificador.nombre}}</p>
-    {% endfor -%}
+    <h2>Nombre:</h2>
+    <p>{{i.nombre}}</p>
+    <h2>Sistema:</h2>
+    <p>{{i.sistema}}</p>
+    <h2>Distribuidor:</h2>
+    <p>{{i.distribuidor}}</p>
+    <h2>Desarrollador:</h2>
+    <p>{{i.desarrollador}}</p>
+    <h2>Categoría:</h2>
+    <p>{{i.categoria}}</p>
+    <h2>Año de publicación:</h2>
+    <p>{{i.año}}</p>
+<a href="/listajuegos">Página lista juegos</a>
 {% endblock %}
